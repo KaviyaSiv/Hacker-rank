@@ -1,0 +1,130 @@
+3.Most HackerRank challenges require you to read input from stdin (standard input) and write output to stdout (standard output).
+
+One popular way to read input from stdin is by using the Scanner class and specifying the Input Stream as System.in. For example:
+
+Scanner scanner = new Scanner(System.in);
+String myString = scanner.next();
+int myInt = scanner.nextInt();
+scanner.close();
+
+System.out.println("myString is: " + myString);
+System.out.println("myInt is: " + myInt);
+The code above creates a Scanner object named  and uses it to read a String and an int. It then closes the Scanner object because there is no more input to read, and prints to stdout using System.out.println(String). So, if our input is:
+
+Hi 5
+Our code will print:
+
+myString is: Hi
+myInt is: 5
+Alternatively, you can use the BufferedReader class.
+
+Task
+In this challenge, you must read  integers from stdin and then print them to stdout. Each integer must be printed on a new line. To make the problem a little easier, a portion of the code is provided for you in the editor below.
+
+Input Format
+
+There are  lines of input, and each line contains a single integer.
+
+Sample Input
+
+42
+100
+125
+Sample Output
+
+42
+100
+125
+
+code stars here for 3
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b= scan.nextInt();
+        int c= scan.nextInt();
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+    }
+}
+
+
+4.Task
+Given an integer, , perform the following conditional actions:
+
+If  is odd, print Weird
+If  is even and in the inclusive range of  to , print Not Weird
+If  is even and in the inclusive range of  to , print Weird
+If  is even and greater than , print Not Weird
+Complete the stub code provided in your editor to print whether or not  is weird.
+
+Input Format
+
+A single line containing a positive integer, .
+
+Constraints
+
+Output Format
+
+Print Weird if the number is weird; otherwise, print Not Weird.
+
+Sample Input 0
+
+3
+Sample Output 0
+
+Weird
+Sample Input 1
+
+24
+Sample Output 1
+
+Not Weird
+
+
+
+
+  code strats herae for 4
+  import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N=sc.nextInt();
+        String ans;
+        if(N%2==1)
+        {
+            ans= "Weird";
+            
+        }else{
+            if(N>=2 && N<=5)
+            {
+                ans="Not Weird";
+            }else if(N>=6 && N<=20)
+            {
+               ans="Weird";
+            
+            }else{
+                 ans="Not Weird";
+        }
+       
+       
+    }
+    System.out.print(ans);
+}
+}
